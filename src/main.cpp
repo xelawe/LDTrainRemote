@@ -111,6 +111,7 @@ void setup()
 {
   Serial.begin(115200);
   // define Pin Modes
+  pinMode(LED_BUILTIN, OUTPUT);
   pbMusic.attach(BTN_MUSIC, INPUT_PULLUP);
   pbLight.attach(BTN_LICHT, INPUT_PULLUP);
   pbWater.attach(BTN_WASSER, INPUT_PULLUP);
@@ -128,7 +129,7 @@ void loop()
     if (myHub.isConnected())
     {
       Serial.println("We are now connected to the HUB");
-      digitalWrite(2, HIGH);
+      digitalWrite(LED_BUILTIN, HIGH);
     }
     else
     {
