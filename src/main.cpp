@@ -128,7 +128,7 @@ void loop()
     if (myHub.isConnected())
     {
       Serial.println("We are now connected to the HUB");
-      digitalWrite(LED_BUILTIN, HIGH);
+      digitalWrite(2, HIGH);
     }
     else
     {
